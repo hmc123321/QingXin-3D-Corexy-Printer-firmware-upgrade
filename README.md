@@ -12,13 +12,14 @@
 确定主板后工作就简单多了，于是有了这一版固件。固件删除了机器原版自带的不够精准的舵机探针，改为压电效应器,热床的控制方式改为了PID，增加了自定义启动界面。  
 ![压电效应器](https://gd1.alicdn.com/imgextra/i2/833130887/TB241L2XTnI8KJjSszbXXb4KFXa_!!833130887.jpg "压电效应器")  
 后面由于尝试增加TMC2208的串口驱动，操作不当损坏主板，于是换成了手头多余的AnyCubic Trigorilla主板。  
-大家如果要更改此固件为原版，只需要修改
-
-    #define MOTHERBOARD BOARD_MEGACONTROLLER
-    ...
-    #define X_MIN_ENDSTOP_INVERTING false
-    #define Y_MIN_ENDSTOP_INVERTING false
-    #define Z_MIN_ENDSTOP_INVERTING true 
-    ...
-    #define Z_MIN_PROBE_ENDSTOP_INVERTING Z_MIN_ENDSTOP_INVERTING
+大家如果要更改此固件为原版主板，只需要修改
+```C
+#define MOTHERBOARD BOARD_MEGACONTROLLER
+...
+#define X_MIN_ENDSTOP_INVERTING false
+#define Y_MIN_ENDSTOP_INVERTING false
+#define Z_MIN_ENDSTOP_INVERTING true 
+...
+#define Z_MIN_PROBE_ENDSTOP_INVERTING Z_MIN_ENDSTOP_INVERTING
+```
 即可。
