@@ -23,3 +23,7 @@
 #define Z_MIN_PROBE_ENDSTOP_INVERTING Z_MIN_ENDSTOP_INVERTING
 ```
 即可。
+
+2021/09/17更新
+增加TMC2209串口驱动
+修改Mini-Panel LCD引脚定义以及TMC的引脚定义（为Trigorilla定制）
